@@ -33,13 +33,15 @@ export class BasicPlanService {
   }
 
   rereq(id: number, type: string, user: any): Observable<users> {
-    
-    user.plan_id = id;
-    user.plan_type = type;
+    if (type === 'individual') {
+      user.home_plan_id = id;
+      user.business_plan_id = 0; // Set business_plan_id to 0 for individual plan
+    } else if (type === 'business') {
+      user.business_plan_id = id;
+      user.home_plan_id = 0; // Set home_plan_id to 0 for business plan
+    }
 
-
-    const url = `${this.baseUrl}/customer_data/1`;
-
+    const url = `${this.baseUrl}/customer_data/${user.id}`;
 
     return this.http.put<users>(url, user).pipe(
       catchError(error => {

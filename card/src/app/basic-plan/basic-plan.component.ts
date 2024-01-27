@@ -27,10 +27,15 @@ export class BasicPlanComponent implements OnInit {
     const id: number = 1;
     this.basicPlanService.getUserProfile(id).subscribe(data => {
       this.userProfile = data;
-      console.log(this.userProfile?.plan_id);
+      if (this.userProfile?.plan_type === 'business') {
+        console.log(this.userProfile?.business_plan_id);
+      } else if (this.userProfile?.plan_type === 'individual') {
+        console.log(this.userProfile?.home_plan_id);
+      }
     });
   }
-
+  
+  
   selectType(type: string): void {
     if (type === 'individual') {
       this.basicPlanService.getIndividualPlans().subscribe((plans) => {
@@ -56,19 +61,22 @@ export class BasicPlanComponent implements OnInit {
     console.log(type);
 
     if (this.userProfile) {
-      this.basicPlanService.rereq(id, type, this.userProfile).subscribe(
+      // Use the correct plan type when calling rereq method
+      const planType = type === 'business' ? 'business' : 'individual';
+  
+      this.basicPlanService.rereq(id, planType, this.userProfile).subscribe(
         updatedUserData => {
           this.updatedUser = updatedUserData;
           console.log('User profile updated:', updatedUserData);
-
+  
           // Show success message
           this.snackBar.open('Recharge successful', 'Close', {
-            duration: 3000,  // Duration in milliseconds
+            duration: 3000,
           });
         },
         error => {
           console.error('updated', error);
-
+  
           // Show error message
           this.snackBar.open('Recharge failed', 'Close', {
             duration: 3000,
