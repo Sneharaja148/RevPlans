@@ -24,29 +24,7 @@ export class RechargeDialogComponent {
   onYesClick(): void {
     // Handle 'Yes' click if needed
     this.dialogRef.close("confirmed");
-    debugger
-    // this.basicPlanService.rereq(this.data.plan.plan.id, this.data.plan.plan.plan_type, this.data.users).subscribe(
-
-    //   updatedUserData => {
-
-    //     console.log('User profile updated:', updatedUserData);
-
-
-    //     // Show success message
-    //     this.snackBar.open('Recharge successful', 'Close', {
-    //       duration: 2000,  // Duration in milliseconds
-    //     });
-    //   },
-    //   error => {
-    //     console.error('updated', error);
-
-    //     // Show error message
-    //     this.snackBar.open('Recharge failed', 'Close', {
-    //       duration: 2000,
-    //     });
-    //   }
-    // );
-
+    
   }
 
 }

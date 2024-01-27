@@ -25,6 +25,8 @@ import { Router } from 'express';
 import { RechargeComponent } from './recharge/recharge.component';
 import { RechargeDialogComponent } from './recharge-dialog/recharge-dialog.component';
 import { PlanFooterComponent } from './plan-footer/plan-footer.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { PlanFooterComponent } from './plan-footer/plan-footer.component';
     BasicPlanComponent,
     RechargeDialogComponent,
     PlanFooterComponent,
+    ViewDetailsComponent,
     
   ],
   imports: [
@@ -50,7 +53,8 @@ import { PlanFooterComponent } from './plan-footer/plan-footer.component';
     MatIconModule,
     MatButtonToggleModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
      
   ],
   

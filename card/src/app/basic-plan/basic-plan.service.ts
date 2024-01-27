@@ -33,7 +33,7 @@ export class BasicPlanService {
   }
 
   rereq(id: number, type: string, user: any): Observable<users> {
-    debugger
+    
     user.plan_id = id;
     user.plan_type = type;
 

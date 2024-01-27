@@ -5,6 +5,7 @@ import { users } from '../../../user';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { RechargeDialogComponent } from '../recharge-dialog/recharge-dialog.component';
+import { ViewDetailsComponent } from '../view-details/view-details.component';
 
 @Component({
   selector: 'app-basic-plan',
@@ -17,6 +18,7 @@ export class BasicPlanComponent implements OnInit {
   plans: i_plans[] = [];
   bplans: b_plans[] = [];
   selectedType: string = 'individual';
+  selectedPlan : any;
 
   constructor(private basicPlanService: BasicPlanService, private snackBar: MatSnackBar, public dialog: MatDialog,private cdr: ChangeDetectorRef) {}
 
@@ -50,7 +52,7 @@ export class BasicPlanComponent implements OnInit {
   }
 
   recharge(id: number, type: string): void {
-    debugger
+    
     console.log(type);
 
     if (this.userProfile) {
@@ -81,7 +83,7 @@ export class BasicPlanComponent implements OnInit {
 
   openRechargeDialog(plan: any): void {
     // Set the flag to blur the background
-    debugger
+    
     this.blurBackground = true;
 
     // Open the MatDialog with the plan data
@@ -94,7 +96,7 @@ export class BasicPlanComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       // Reset the background blur flag
       this.blurBackground = false;
-      debugger
+      
 
       if (result === 'confirmed') {
         // Call the recharge method if confirmed
@@ -102,6 +104,22 @@ export class BasicPlanComponent implements OnInit {
       }
     });
   }
+
+  // To display the details  of the plans when user clicks the view-details button
+
+  openDetailsModal(plan:any): void {
+    this.selectedPlan = plan;
+  
+    const dialogRef = this.dialog.open(ViewDetailsComponent, {
+      width: '80%',
+      height: 'auto',
+      maxWidth: '300px',
+      maxHeight: '600px',
+      panelClass: 'custom-modal-container',
+      data: { plan: this.selectedPlan } 
+    });
+  }
+
 }
 
 
