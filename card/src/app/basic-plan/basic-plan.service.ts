@@ -4,7 +4,7 @@ import { Observable, catchError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { b_plans, i_plans } from '../../../card';
-import { users } from '../../../user';
+import { users } from '../../../users';
 
 @Injectable({
   providedIn: 'root'

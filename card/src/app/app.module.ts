@@ -22,7 +22,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ROUTES, provideRouter } from '@angular/router';
 import { Router } from 'express';
-import { RechargeComponent } from './recharge/recharge.component';
 import { RechargeDialogComponent } from './recharge-dialog/recharge-dialog.component';
 import { PlanFooterComponent } from './plan-footer/plan-footer.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
@@ -31,7 +30,6 @@ import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
-    RechargeComponent,
     BasicPlanComponent,
     RechargeDialogComponent,
     PlanFooterComponent,

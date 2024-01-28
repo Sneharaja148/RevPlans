@@ -403,8 +403,18 @@ button {
 
 /* ... (the rest of your existing CSS) */
 
-.recharge-viewDe{
+
+
+/* Add this to your styles.css or view-details.component.css */
+
+.recharge-viewDe {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.recharge-viewDe button {
+  flex: 1;
+  margin-right: 18px; /* Adjust the margin between buttons as needed */
 }

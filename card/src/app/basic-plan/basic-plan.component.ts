@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BasicPlanService } from './basic-plan.service';
-import { i_plans, b_plans } from '../../../card';
-import { users } from '../../../user';
+import { i_plans,b_plans } from '../../../card';
+import { users } from '../../../users';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { RechargeDialogComponent } from '../recharge-dialog/recharge-dialog.component';
@@ -121,8 +121,8 @@ export class BasicPlanComponent implements OnInit {
     const dialogRef = this.dialog.open(ViewDetailsComponent, {
       width: '80%',
       height: 'auto',
-      maxWidth: '300px',
-      maxHeight: '600px',
+      maxWidth: '400px',
+      maxHeight: '500px',
       panelClass: 'custom-modal-container',
       data: { plan: this.selectedPlan } 
     });

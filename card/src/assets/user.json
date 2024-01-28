@@ -341,8 +341,9 @@
       "customer_address": "123 Main St",
       "customer_email": "john.doe@example.com",
       "customer_pass": "password123",
-      "home_plan_id": "1",
+      "home_plan_id": "2",
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": "individual"
     },
     {
@@ -354,6 +355,7 @@
       "customer_pass": "securepass456",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -365,6 +367,7 @@
       "customer_pass": "bob123pass",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -376,6 +379,7 @@
       "customer_pass": "password123",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -387,6 +391,7 @@
       "customer_pass": "password123",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -398,6 +403,7 @@
       "customer_pass": "evapass789",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -409,6 +415,7 @@
       "customer_pass": "davidpass123",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -420,6 +427,7 @@
       "customer_pass": "gracepass567",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -431,6 +439,7 @@
       "customer_pass": "frankpass987",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     },
     {
@@ -442,6 +451,7 @@
       "customer_pass": "helenpass456",
       "home_plan_id": 0,
       "business_plan_id": 0,
+      "no_plan_id": 0,
       "plan_type": ""
     }
   ]

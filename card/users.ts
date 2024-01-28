@@ -7,5 +7,6 @@ export interface users {
     customer_pass: string,
     home_plan_id: number,
     business_plan_id: number,
+    no_plan_id: number,
     plan_type: string;
 }

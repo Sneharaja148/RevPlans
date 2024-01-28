@@ -1,5 +1,6 @@
 /* view-details.component.css */
 
+
 .modal-header {
   display: flex;
   justify-content: flex-end;
@@ -112,3 +113,53 @@ mat-dialog-actions {
     border-top-right-radius: 0;
   }
 }
+
+/* view-details.component.css */
+/* ... Existing styles ... */
+
+.Subscriptions{
+  color: #000;
+}
+
+.subscriptions-section {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.subscription-icon {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.subscription-icon img {
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.subscription-icon img:hover {
+  transform: scale(1.1);
+}
+
+.subscription-icon div {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+/* view-details.component.css */
+
+.subscription-icon {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+}
+
+.icon {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  margin-right: 5px; /* Adjust the gap between icons as needed */
+}
+
+
+/* ... Remaining existing styles ... */

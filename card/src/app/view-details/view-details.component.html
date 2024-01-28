@@ -1,4 +1,5 @@
 <!-- view-details.component.html -->
+
 <div class="modal-header">
   <button mat-icon-button mat-dialog-close>
     <mat-icon class="close-icon">close</mat-icon>
@@ -30,7 +31,14 @@
           <td class="info-value">Unlimited</td>
         </tr>
       </table>
-    </mat-card-content>
+      <h3 class ="Subscriptions">Subscriptions</h3>
+        <div  class="subscription-icon">
+          <img class="icon" src={{plan.plan_icon_1}}>
+          <img class="icon" src={{plan.plan_icon_2}}>
+        </div>
+      
+
+     </mat-card-content>
   </mat-card>
 </mat-dialog-content>
 
